@@ -13,7 +13,7 @@ export default defineConfig({
     server:{
       proxy:{
         "/api":{ 
-          target: "http://localhost:8080/api/",
+          target: "http://k8s-default-backing-8476de3e44-889811917.ap-northeast-2.elb.amazonaws.com/api/",
           rewrite: (path)=>path.replace(/^\/api/,""),
         },
       }
